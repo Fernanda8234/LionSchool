@@ -56,22 +56,67 @@ footer{
     display: flex;
     padding: 4px 0px;
     gap: 20px;
+    font-size: 16px;
 }
 
 .icons img{
     width: 20px;
 }
 
-.filhosTextoBaixo{
-    font-size: 16px;
+.copy{
+    font-size: 20px;
 }
 
 .sites{
-    width: 225px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
 }
 
 .sites img{
-    width: 45px;
+    width: 48px;
+}
+
+@media (max-width: 320px){
+    .headerImg{
+        padding: 10px 15px 0px;
+    }
+
+    .botaovoltar p{
+        display: none;
+    }
+
+    .botaovoltar img{
+        width: 33.75px;
+    }
+
+    footer{
+        display: table;
+        padding: 10px;
+    }
+
+    .baixo{
+        flex-direction: column;
+    }
+
+    .filhosTextoBaixo{
+        display: grid;
+        justify-items: center; 
+        padding-top: 25px;
+    }
+
+    .copySites{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .copy{
+        font-size: 12px;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+    .copy, .sites{
+        padding-top: 35px;
+    }
 }
