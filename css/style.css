@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: #3347B0;
+    height: 100px;
+}
+
+p{
+    color: #FFFFFF;
+}
+
+.headerImg{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 70px 0px;
+}
+
+.botaovoltar{
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+    gap: 10px;
+    font-size: 36px;
+}
+
+.botaovoltar img{
+    width: 45px;
+}
+
+main{
+    flex: 1;
+}
+
+footer{
+    background-color: #3347B0;
+    height: 140px;
+    position: relative;
+}
+
+.baixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.icons{
+    display: flex;
+    padding: 4px 0px;
+    gap: 20px;
+}
+
+.icons img{
+    width: 20px;
+}
+
+.filhosTextoBaixo{
+    font-size: 16px;
+}
+
+.sites{
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sites img{
+    width: 45px;
+}
