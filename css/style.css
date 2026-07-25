@@ -63,7 +63,14 @@ footer{
     width: 20px;
 }
 
+.copySites{
+    display: flex;
+    flex-direction: row;
+}
+
 .copy{
+    padding-top: 10px;
+    padding-right: 300px;
     font-size: 20px;
 }
 
@@ -77,7 +84,7 @@ footer{
     width: 48px;
 }
 
-@media (max-width: 320px){
+@media (min-width: 320px) and (max-width: 480px){
     .headerImg{
         padding: 10px 15px 0px;
     }
@@ -113,10 +120,10 @@ footer{
     .copy{
         font-size: 12px;
         text-align: center;
-        padding-bottom: 25px;
+        padding-right: 0px;
     }
-
+    
     .copy, .sites{
-        padding-top: 35px;
+        padding-top: 25px;
     }
 }
