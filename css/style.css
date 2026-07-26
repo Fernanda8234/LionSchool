@@ -39,18 +39,10 @@ main{
     flex: 1;
 }
 
-#formulario{
+#secao{
     display: flex;
     flex-direction: row;
     height: 100%;
-}
-
-#apresentacao{
-    width: 500px;
-    flex-shrink: 0; /* não deixa o item encolher no Flexbox */
-    position: relative;
-    left: 250px;
-    top: 140px;
 }
 
 #texto{
@@ -58,6 +50,8 @@ main{
     color: #353535;
     font-weight: 300;
     padding-left: 10px;
+    width: 475px;
+    margin-top: 90px;
 }
 
 .destaque{
@@ -71,20 +65,21 @@ main{
     margin-top: 90px;
 }
 
+#texto, #dispositivos{
+    margin-left: 9.4vw;
+}
+
 #estudante{
     width: 257px;
     height: 426px;
-    position: relative;
-    top: 195px;
-    left: 450px;
+    margin: 14.4vh 6.25% 0 5%;
 }
 
 #botoes{
     display: flex;
     flex-direction: column;
     gap: 55px;
-    padding-left: 650px;
-    margin-top: 175px;
+    margin-top: 13vh;
 }
 
 #ds{
@@ -109,7 +104,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: #000000;
+    border: 1px solid #000000;
     box-shadow: 12px 15px 2px #3348b086;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -119,7 +114,6 @@ main{
 footer{
     background-color: #3347B0;
     height: 140px;
-    position: relative;
 }
 
 .baixo{
@@ -147,7 +141,7 @@ footer{
 }
 
 .copy{
-    padding: 10px 300px 0 0;
+    padding: 10px 230px 0 0;
     font-size: 20px;
 }
 
@@ -175,6 +169,44 @@ footer{
         width: 33.75px;
     }
 
+    #secao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #texto{
+        width: 260px;
+        margin: 80px 0 0 0;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #dispositivos{
+        display: none;
+    }
+
+    #botoes{
+        margin: 80px 0 50px 0;
+    }
+
+    #estudante{
+        width: 194px;
+        height: 331px;
+        margin: 60px 0 0 0;
+    }
+
+    #redes{
+        font-size: 40px;
+    }
+
+    #ds, #redes{
+        width: 175px;
+        height: 175px;
+        background-image: none;
+        padding: 0;
+    }
+
     footer{
         display: table;
         padding: 10px;
@@ -198,8 +230,7 @@ footer{
     .copy{
         font-size: 12px;
         text-align: center;
-        padding-right: 0px;
-        padding-bottom: 30px;
+        padding: 0 0 30px 0;
     }
     
     .copy, .sites{
