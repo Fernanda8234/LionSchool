@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -28,6 +28,7 @@ p{
     padding-right: 25px;
     gap: 10px;
     font-size: 36px;
+    cursor: pointer;
 }
 
 .botaovoltar img{
@@ -36,6 +37,83 @@ p{
 
 main{
     flex: 1;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#apresentacao{
+    width: 500px;
+    flex-shrink: 0; /* não deixa o item encolher no Flexbox */
+    position: relative;
+    left: 250px;
+    top: 140px;
+}
+
+#texto{
+    font-size: 57.38px;
+    color: #353535;
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+.destaque{
+    color: #3347B0;
+    font-weight: 700;
+}
+
+#dispositivos{
+    width: 436px;
+    height: 262px;
+    margin-top: 90px;
+}
+
+#estudante{
+    width: 257px;
+    height: 426px;
+    position: relative;
+    top: 195px;
+    left: 450px;
+}
+
+#botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    padding-left: 650px;
+    margin-top: 175px;
+}
+
+#ds{
+    background-image: url('../img/ds.png');
+    background-position: 25% 50%;
+    padding-left: 80px;
+}
+
+#redes{
+    background-image: url('../img/redes.png');
+    background-position: 15% 50%;
+    padding-left: 100px;
+}
+
+#ds, #redes{
+    background-color: #3347B0;
+    color: #FFFFFF;
+    width: 400px;
+    height: 200px;
+    border-radius: 1px;
+    font-size: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #000000;
+    box-shadow: 12px 15px 2px #3348b086;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 96px;
 }
 
 footer{
@@ -69,8 +147,7 @@ footer{
 }
 
 .copy{
-    padding-top: 10px;
-    padding-right: 300px;
+    padding: 10px 300px 0 0;
     font-size: 20px;
 }
 
@@ -78,6 +155,7 @@ footer{
     width: 250px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .sites img{
@@ -121,6 +199,7 @@ footer{
         font-size: 12px;
         text-align: center;
         padding-right: 0px;
+        padding-bottom: 30px;
     }
     
     .copy, .sites{
