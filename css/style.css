@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+:root {
+    --cor-primaria: #3347B0;
+    --cor-secundaria: #FFFFFF;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     height: 100vh;
@@ -8,12 +13,12 @@ body{
 }
 
 header{
-    background-color: #3347B0;
+    background-color: var(--cor-primaria);
     height: 100px;
 }
 
 p{
-    color: #FFFFFF;
+    color: var(--cor-secundaria);
 }
 
 .headerImg{
@@ -55,7 +60,7 @@ main{
 }
 
 .destaque{
-    color: #3347B0;
+    color: var(--cor-primaria);
     font-weight: 700;
 }
 
@@ -82,37 +87,31 @@ main{
     margin-top: 13vh;
 }
 
-#ds{
-    background-image: url('../img/ds.png');
-    background-position: 25% 50%;
-    padding-left: 80px;
-}
-
-#redes{
-    background-image: url('../img/redes.png');
-    background-position: 15% 50%;
-    padding-left: 100px;
+#botoes img{
+    width: 96px;
+    filter: invert(1);
+    order: -1;
 }
 
 #ds, #redes{
-    background-color: #3347B0;
-    color: #FFFFFF;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     width: 400px;
     height: 200px;
     border-radius: 1px;
     font-size: 64px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     border: 1px solid #000000;
     box-shadow: 12px 15px 2px #3348b086;
+    gap: 30px;
     cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: 96px;
 }
 
 footer{
-    background-color: #3347B0;
+    background-color: var(--cor-primaria);
     height: 140px;
 }
 
@@ -190,10 +189,8 @@ footer{
         margin: 80px 0 50px 0;
     }
 
-    #estudante{
-        width: 194px;
-        height: 331px;
-        margin: 60px 0 0 0;
+    #botoes img{
+        display: none;
     }
 
     #redes{
@@ -203,8 +200,13 @@ footer{
     #ds, #redes{
         width: 175px;
         height: 175px;
-        background-image: none;
         padding: 0;
+    }
+
+    #estudante{
+        width: 194px;
+        height: 331px;
+        margin: 60px 0 0 0;
     }
 
     footer{

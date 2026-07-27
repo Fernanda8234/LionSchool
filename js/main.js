@@ -9,9 +9,9 @@ const paginas = {
     }
 }
 
-export function renderizarPagina(nomePagina){
+export async function renderizarPagina(nomePagina){
     const main = document.getElementById('main-content')
-    const pagina = paginas[nomePagina].renderizar()
+    const pagina = await paginas[nomePagina].renderizar()
     main.replaceChildren(pagina)
 }
 
