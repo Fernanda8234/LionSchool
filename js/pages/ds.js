@@ -14,22 +14,22 @@ export async function criarAlunosDS(){
     const dadosAlunos = await getInformacoesDS('ds')
 
     const caixaAlunos = document.createElement('div')
-    caixaAlunos.id = 'secaoAlunos'
+    caixaAlunos.id = 'caixaAlunos'
 
     dadosAlunos.map(aluno => {
+        const alunos = document.createElement('div')
+        alunos.className = 'alunos'
+
         const fotoAluno = document.createElement('img')
-            fotoAluno.src = aluno.foto
+        fotoAluno.src = aluno.foto
 
-        caixaAlunos.append(fotoAluno)
-    })
-
-    dadosAlunos.map(aluno => {
         const nomeAluno = document.createElement('p')
-            nomeAluno.textContent = aluno.nome
+        nomeAluno.textContent = aluno.nome
 
-        caixaAlunos.append(nomeAluno)
+        alunos.append(fotoAluno, nomeAluno)
+        caixaAlunos.append(alunos)
     })
-    
+
     secao.append(caixaAlunos)
     return secao
 }

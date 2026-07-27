@@ -1,0 +1,30 @@
+#caixaAlunos{
+    display: flex;
+    gap: 61px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.alunos{
+    width: 200px;
+    height: 300px;
+    background-color: tomato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.alunos p{
+    text-align: center;
+    padding: 0 10px;
+}
+
+.alunos img{
+    width: 150px;
+    height: 150px;
+    border-radius:50%;
+    margin-bottom: 40px;
+}
