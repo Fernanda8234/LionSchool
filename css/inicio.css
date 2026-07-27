@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --cor-primaria: #3347B0;
+    --cor-secundaria: #FFFFFF;
+}
+
+#secao{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#texto{
+    font-size: 57.38px;
+    color: #353535;
+    font-weight: 300;
+    padding-left: 10px;
+    width: 475px;
+    margin-top: 90px;
+}
+
+.destaque{
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+#dispositivos{
+    width: 436px;
+    height: 262px;
+    margin-top: 90px;
+}
+
+#texto, #dispositivos{
+    margin-left: 9.4vw;
+}
+
+#estudante{
+    width: 257px;
+    height: 426px;
+    margin: 14.4vh 6.25% 0 5%;
+}
+
+#botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    margin-top: 13vh;
+}
+
+#botoes img{
+    width: 96px;
+    filter: invert(1);
+    order: -1;
+}
+
+#ds, #redes{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    width: 400px;
+    height: 200px;
+    border-radius: 1px;
+    font-size: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+    box-shadow: 12px 15px 2px #3348b086;
+    gap: 30px;
+    cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    #secao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #texto{
+        width: 260px;
+        margin: 80px 0 0 0;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #dispositivos{
+        display: none;
+    }
+
+    #botoes{
+        margin: 80px 0 50px 0;
+    }
+
+    #botoes img{
+        display: none;
+    }
+
+    #redes{
+        font-size: 40px;
+    }
+
+    #ds, #redes{
+        width: 175px;
+        height: 175px;
+        padding: 0;
+    }
+
+    #estudante{
+        width: 194px;
+        height: 331px;
+        margin: 60px 0 0 0;
+    }
+}

@@ -1,5 +1,7 @@
 'use strict'
 
+import { renderizarPagina } from '../main.js'
+
 async function getInformacoesCurso(cursos){
     const url = `https://lion-school-phbo.onrender.com/${cursos}`
     const response = await fetch(url)
@@ -7,7 +9,7 @@ async function getInformacoesCurso(cursos){
     return dados
 }
 
-export async function criarInicio() {
+export async function criarInicio(){
     const secao = document.createElement('section')
     secao.id = 'secao'
 
@@ -33,6 +35,7 @@ export async function criarInicio() {
 
     const ds = document.createElement('button')
     ds.textContent = cursos[0].sigla
+    ds.onclick = () => renderizarPagina('ds')
     ds.id = 'ds'
 
     const iconeRedes = document.createElement('img')
