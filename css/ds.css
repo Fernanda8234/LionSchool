@@ -10,7 +10,6 @@
 .alunos{
     width: 200px;
     height: 300px;
-    background-color: tomato;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,4 +26,12 @@
     height: 150px;
     border-radius:50%;
     margin-bottom: 40px;
+}
+
+.alunos.formado{
+    background-color: #E5B657;
+}
+
+.alunos.nao-formado{
+    background-color: #3347B0;
 }
