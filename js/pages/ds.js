@@ -1,7 +1,7 @@
 'use strict'
 
 import { renderizarPagina } from '../main.js'
-import { formadoNaoFormado } from "./formadoNaoFormado.js"
+import { formadoNaoFormado } from "../funcoes/formadoNaoFormado.js"
 
 async function getInformacoesDS(ds){
     const url = `https://lion-school-phbo.onrender.com/alunos?curso=${ds}`
@@ -13,16 +13,31 @@ async function getInformacoesDS(ds){
 function voltarInicio(){
     const voltar = document.getElementById('sair')
     voltar.textContent = "Voltar"
-    voltar.onclick = () => {
-        renderizarPagina('inicio')
-        location.reload()
-    }
+        voltar.onclick = () => {
+            renderizarPagina('inicio')
+            location.reload()
+        }
     return voltar
 }
 
 export async function criarAlunosDS(){
     const secao = document.createElement('section')
     secao.id = 'secaoDS'
+
+    const statusSecao = document.createElement('select')
+
+        const opcaoStatus = document.createElement('option')
+        opcaoStatus.textContent = 'Status'
+
+        const opcaoFinalizado = document.createElement('option')
+        opcaoFinalizado.textContent = 'Finalizado'
+        opcaoFinalizado.value = 'finalizado'
+
+        const opcaoCursando = document.createElement('option')
+        opcaoCursando.textContent = 'Cursando'
+        opcaoCursando.value = 'cursando'
+
+        const statusCaixa = document.createElement('div')
 
     const dadosAlunos = await getInformacoesDS('ds')
 
@@ -63,6 +78,8 @@ export async function criarAlunosDS(){
     })
 
     voltarInicio()
-    secao.append(caixaAlunos)
+    statusSecao.append(opcaoStatus, opcaoFinalizado, opcaoCursando)
+    statusCaixa.append(statusSecao)
+    secao.append(statusCaixa, caixaAlunos)
     return secao
 }
