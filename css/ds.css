@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 #caixaAlunos{
     display: flex;
     gap: 61px;
@@ -19,6 +21,8 @@
 .alunos p{
     text-align: center;
     padding: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 4.5px 2px #0000003e;
 }
 
 .alunos img{
@@ -34,4 +38,8 @@
 
 .alunos.nao-formado{
     background-color: #3347B0;
+}
+
+.alunos.formado, .alunos.nao-formado{
+    box-shadow: 10px 10px 8px #00000030;
 }

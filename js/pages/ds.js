@@ -1,5 +1,6 @@
 'use strict'
 
+import { renderizarPagina } from '../main.js'
 import { formadoNaoFormado } from "./formadoNaoFormado.js"
 
 async function getInformacoesDS(ds){
@@ -7,6 +8,16 @@ async function getInformacoesDS(ds){
     const response = await fetch(url)
     const dados = await response.json()
     return dados
+}
+
+function voltarInicio(){
+    const voltar = document.getElementById('sair')
+    voltar.textContent = "Voltar"
+    voltar.onclick = () => {
+        renderizarPagina('inicio')
+        location.reload()
+    }
+    return voltar
 }
 
 export async function criarAlunosDS(){
@@ -45,14 +56,13 @@ export async function criarAlunosDS(){
         fotoAluno.src = aluno.foto
 
         const nomeAluno = document.createElement('p')
-        nomeAluno.textContent = aluno.nome
+        nomeAluno.textContent = aluno.nome.toUpperCase()
 
         alunos.append(fotoAluno, nomeAluno)
         caixaAlunos.append(alunos)
-
-        console.log(alunos)
     })
 
+    voltarInicio()
     secao.append(caixaAlunos)
     return secao
 }
