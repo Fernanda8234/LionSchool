@@ -3,8 +3,8 @@
 import { renderizarPagina } from '../main.js'
 import { formadoNaoFormado } from "../funcoes/formadoNaoFormado.js"
 
-async function getInformacoesDS(ds){
-    const url = `https://lion-school-phbo.onrender.com/alunos?curso_id=${ds}`
+async function getInformacoesRedes(redes){
+    const url = `https://lion-school-phbo.onrender.com/alunos?curso_id=${redes}`
     const response = await fetch(url)
     const dados = await response.json()
     return dados
@@ -20,23 +20,19 @@ function voltarInicio(){
     return voltar
 }
 
-// função que decide quais alunos aparecem na tela, conforme o filtro escolhido
 function filtrarAlunos(status, container){
-    // pega todos os cards de aluno que existem dentro do container
     const todosAlunos = container.querySelectorAll('.alunos')
 
-    // passa por cada card, um de cada vez
     todosAlunos.forEach(aluno => {
-        // se o filtro for "todos" OU o status do card bater com o filtro escolhido...
         if(status === 'todos' || aluno.dataset.status === status){
-            aluno.style.display = '' // ...mostra o card (volta ao normal)
+            aluno.style.display = ''
         } else {
-            aluno.style.display = 'none' // ...senão, esconde o card
+            aluno.style.display = 'none'
         }
     })
 }
 
-export async function criarAlunosDS(){
+export async function criarAlunosRedes(){
     const secao = document.createElement('section')
     secao.id = 'secaoDS'
 
@@ -87,38 +83,18 @@ export async function criarAlunosDS(){
         const statusCaixa = document.createElement('div')
         statusCaixa.className = 'selectCaixa'
 
-    // é o titulo :p
     const titulo = document.createElement('h1')
-    titulo.textContent = 'Desenvolvimento de Sistemas'
+    titulo.textContent = 'Redes'
     titulo.className = 'titulo'
-
-    // dados dos alunos de ds
-    const dadosAlunos = await getInformacoesDS(1)
+    const dadosAlunos = await getInformacoesRedes(2)
 
     const caixaAlunos = document.createElement('div')
     caixaAlunos.className = 'caixaAlunos'
-
-    /*dadosAlunos.map(async aluno => {
-        const alunos = document.createElement('div')
-        alunos.className = 'alunos'
-
-        const statusAluno = await formadoNaoFormado(aluno.status, alunos)
-        statusAluno.className = 'statusAluno'
-
-        const fotoAluno = document.createElement('img')
-        fotoAluno.src = aluno.foto
-
-        const nomeAluno = document.createElement('p')
-        nomeAluno.textContent = aluno.nome
-
-        alunos.append(fotoAluno, nomeAluno, statusAluno)
-        caixaAlunos.append(alunos)
-    })*/
    
     dadosAlunos.forEach(async function(aluno){
         const alunos = document.createElement('div') 
         alunos.className = 'alunos'
-        alunos.dataset.status = aluno.status // guarda o status do aluno como uma etiqueta no card (data-status)
+        alunos.dataset.status = aluno.status
 
         const statusAluno = await formadoNaoFormado(aluno.status, alunos)
 
@@ -132,9 +108,8 @@ export async function criarAlunosDS(){
         caixaAlunos.append(alunos)
     })
 
-    // escuta o select: toda vez que o valor dele mudar, roda essa função
     statusSecao.addEventListener('change', (e) => {
-        filtrarAlunos(e.target.value, caixaAlunos) // chama o filtro passando o valor escolhido e o container dos alunos
+        filtrarAlunos(e.target.value, caixaAlunos)
     })
 
     voltarInicio()

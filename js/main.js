@@ -2,6 +2,7 @@
 
 import { criarInicio } from './pages/inicio.js'
 import { criarAlunosDS } from './pages/ds.js'
+import { criarAlunosRedes } from './pages/redes.js'
 
 const paginas = {
     inicio: {
@@ -11,6 +12,10 @@ const paginas = {
     ds: {
         titulo: 'ds',
         renderizar: criarAlunosDS
+    },
+    redes: {
+        titulo: 'redes',
+        renderizar: criarAlunosRedes
     }
 }
 

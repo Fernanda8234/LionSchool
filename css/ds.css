@@ -59,7 +59,7 @@ select{
     padding-top: 20px;
 }
 
-#caixaAlunos{
+.caixaAlunos{
     display: flex;
     gap: 61px;
     align-items: center;

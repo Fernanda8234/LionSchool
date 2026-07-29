@@ -17,19 +17,23 @@ export async function criarInicio(){
     texto.innerHTML = 'Escolha um <span class="destaque">curso</span> para gerenciar'
     texto.id = 'texto'
 
+    // pc, tablet e celular
     const dispositivos = document.createElement('img')
     dispositivos.src = './img/devices.png'
     dispositivos.id = 'dispositivos'
 
+    // caixa do texto e dispositivos
     const apresentacao = document.createElement('div')
     apresentacao.id = 'apresentacao'
 
+    // imagem de uma estudante
     const estudante = document.createElement('img')
     estudante.src = './img/studant.png'
     estudante.id = 'estudante'
 
     const cursos = await getInformacoesCurso('cursos')
 
+    // icone de ds
     const iconeDs = document.createElement('img')
     iconeDs.src = cursos[0].icon
 
@@ -38,11 +42,13 @@ export async function criarInicio(){
     ds.onclick = () => renderizarPagina('ds')
     ds.id = 'ds'
 
+    // icone de redes
     const iconeRedes = document.createElement('img')
     iconeRedes.src = cursos[1].icon
 
     const redes = document.createElement('button')
     redes.textContent = cursos[1].sigla
+    redes.onclick = () => renderizarPagina('redes')
     redes.id = 'redes'
 
     const botoes = document.createElement('div')
@@ -53,9 +59,13 @@ export async function criarInicio(){
     // }
 
     apresentacao.append(texto, dispositivos)
+
     ds.append(iconeDs)
     redes.append(iconeRedes)
+
     botoes.append(ds, redes)
+
     secao.append(apresentacao, estudante, botoes)
+    
     return secao
 }
