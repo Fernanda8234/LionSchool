@@ -3,6 +3,7 @@
 :root {
     --cor-primaria: #3347B0;
     --cor-secundaria: #FFFFFF;
+    --cor-terciaria: #E5B657;
 }
 
 body{
@@ -128,6 +129,7 @@ footer{
         padding: 0 0 30px 0;
     }
     
+    /* configuração geral */
     .copy, .sites{
         padding-top: 25px;
     }

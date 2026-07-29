@@ -1,11 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+.selectCaixa{
+    background-color: #BCC2E5;
+    height: 40px;
+}
+
+.caixaLegenda{
+    flex-direction: row;
+    margin-right: 70px;
+    gap: 24px;
+}
+
+.caixaLegenda p{
+    color: var(--cor-primaria);
+}
+
+.caixaCor{
+    gap: 10px;
+}
+
+.corAzul, .corAmarela{
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 3px 5px #00000030;
+}
+
+.corAzul{
+    background-color: var(--cor-primaria);
+}
+
+.corAmarela{
+    background-color: var(--cor-terciaria);
+}
+
+select{
+    appearance: none;
+    border: none;
+    background: none; 
+    color: var(--cor-primaria);
+    font-size: 16px;
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+.selectStatus option{
+    color: var(--cor-secundaria);
+}
+
+.selectStatus:hover{
+    background-color: var(--cor-primaria);
+}
+
+.titulo{
+    color: var(--cor-primaria);
+    display: grid;
+    justify-items: center;
+    font-size: 64px;
+    padding-top: 20px;
+}
+
 #caixaAlunos{
     display: flex;
     gap: 61px;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 20px 50px 50px 50px;
     flex-wrap: wrap;
 }
 
@@ -33,11 +92,22 @@
 }
 
 .alunos.formado{
-    background-color: #E5B657;
+    background-color: var(--cor-terciaria);
 }
 
 .alunos.nao-formado{
-    background-color: #3347B0;
+    background-color: var(--cor-primaria);
+}
+
+/* configuração geral */
+select, .caixaLegenda p, .titulo{
+    font-weight: 500;
+}
+
+.selectCaixa, .caixaLegenda, .caixaCor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .alunos.formado, .alunos.nao-formado{

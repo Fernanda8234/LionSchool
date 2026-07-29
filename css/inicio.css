@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-:root {
-    --cor-primaria: #3347B0;
-    --cor-secundaria: #FFFFFF;
-}
-
 #secao{
     display: flex;
     flex-direction: row;
@@ -31,10 +26,6 @@
     margin-top: 90px;
 }
 
-#texto, #dispositivos{
-    margin-left: 9.4vw;
-}
-
 #estudante{
     width: 257px;
     height: 426px;
@@ -52,6 +43,11 @@
     width: 96px;
     filter: invert(1);
     order: -1;
+}
+
+/* configuração geral */
+#texto, #dispositivos{
+    margin-left: 9.4vw;
 }
 
 #ds, #redes{
@@ -101,15 +97,16 @@
         font-size: 40px;
     }
 
-    #ds, #redes{
-        width: 175px;
-        height: 175px;
-        padding: 0;
-    }
-
     #estudante{
         width: 194px;
         height: 331px;
         margin: 60px 0 0 0;
+    }
+
+    /* configuração geral */
+    #ds, #redes{
+        width: 175px;
+        height: 175px;
+        padding: 0;
     }
 }
