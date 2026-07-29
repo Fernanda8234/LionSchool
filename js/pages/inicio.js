@@ -11,25 +11,24 @@ async function getInformacoesCurso(cursos){
 
 export async function criarInicio(){
     const secao = document.createElement('section')
-    secao.id = 'secao'
+    secao.className = 'secaoInicio'
 
     const texto = document.createElement('p')
     texto.innerHTML = 'Escolha um <span class="destaque">curso</span> para gerenciar'
-    texto.id = 'texto'
+    texto.className = 'textoEscolhaCurso'
 
     // pc, tablet e celular
     const dispositivos = document.createElement('img')
     dispositivos.src = './img/devices.png'
-    dispositivos.id = 'dispositivos'
+    dispositivos.className = 'dispositivosInicio'
 
     // caixa do texto e dispositivos
     const apresentacao = document.createElement('div')
-    apresentacao.id = 'apresentacao'
 
     // imagem de uma estudante
     const estudante = document.createElement('img')
     estudante.src = './img/studant.png'
-    estudante.id = 'estudante'
+    estudante.className = 'estudanteInicio'
 
     const cursos = await getInformacoesCurso('cursos')
 
@@ -40,7 +39,7 @@ export async function criarInicio(){
     const ds = document.createElement('button')
     ds.textContent = cursos[0].sigla
     ds.onclick = () => renderizarPagina('ds')
-    ds.id = 'ds'
+    ds.className = 'botoesIncio'
 
     // icone de redes
     const iconeRedes = document.createElement('img')
@@ -49,10 +48,10 @@ export async function criarInicio(){
     const redes = document.createElement('button')
     redes.textContent = cursos[1].sigla
     redes.onclick = () => renderizarPagina('redes')
-    redes.id = 'redes'
+    redes.className = 'botoesIncio'
 
     const botoes = document.createElement('div')
-    botoes.id = 'botoes'
+    botoes.className = 'caixaBotaoInicio'
     
     // if (window.innerWidth <= 480){
         

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-#secao{
+.secaoInicio{
     display: flex;
     flex-direction: row;
     height: 100%;
 }
 
-#texto{
+.textoEscolhaCurso{
     font-size: 57.38px;
     color: #353535;
     font-weight: 300;
@@ -20,37 +20,37 @@
     font-weight: 700;
 }
 
-#dispositivos{
+.dispositivosInicio{
     width: 436px;
     height: 262px;
     margin-top: 90px;
 }
 
-#estudante{
+.estudanteInicio{
     width: 257px;
     height: 426px;
     margin: 14.4vh 6.25% 0 5%;
 }
 
-#botoes{
+.caixaBotaoInicio{
     display: flex;
     flex-direction: column;
     gap: 55px;
     margin-top: 13vh;
 }
 
-#botoes img{
+.caixaBotaoInicio img{
     width: 96px;
     filter: invert(1);
     order: -1;
 }
 
 /* configuração geral */
-#texto, #dispositivos{
+.textoEscolhaCurso, .dispositivosInicio{
     margin-left: 9.4vw;
 }
 
-#ds, #redes{
+.botoesIncio{
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     width: 400px;
@@ -68,43 +68,39 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px){
-    #secao{
+    .secaoInicio{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #texto{
+    .textoEscolhaCurso{
         width: 260px;
         margin: 80px 0 0 0;
         font-size: 30px;
         text-align: center;
     }
 
-    #dispositivos{
+    .dispositivosInicio{
         display: none;
     }
 
-    #botoes{
+    .caixaBotaoInicio{
         margin: 80px 0 50px 0;
     }
 
-    #botoes img{
+    .caixaBotaoInicio img{
         display: none;
     }
 
-    #redes{
-        font-size: 40px;
-    }
-
-    #estudante{
+    .estudanteInicio{
         width: 194px;
         height: 331px;
         margin: 60px 0 0 0;
     }
 
-    /* configuração geral */
-    #ds, #redes{
+    .botoesIncio{
+        font-size: 40px;
         width: 175px;
         height: 175px;
         padding: 0;
