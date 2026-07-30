@@ -34,7 +34,7 @@ function filtrarAlunos(status, container){
 
 export async function criarAlunosRedes(){
     const secao = document.createElement('section')
-    secao.id = 'secaoDS'
+    secao.className = 'secao'
 
     // seção de escolha
     const statusSecao = document.createElement('select')

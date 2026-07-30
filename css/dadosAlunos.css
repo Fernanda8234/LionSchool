@@ -1,0 +1,56 @@
+.containerDados{
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.caixaAluno{
+    display: flex;
+    box-shadow: 0 0 15px 3px #00000030;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixaAluno img{
+    width: 300px;
+    height: 300px;
+}
+
+.caixaAluno p{
+    color: var(--cor-primaria);
+}
+
+.caixaDados{
+    display: flex;
+    box-shadow: 0 0 15px 3px #00000030;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.itensCaixa{
+    background-color: #EEEFF8;
+    height: 350px;
+}
+
+.grafico{
+    display: flex;
+    gap: 40px;
+}
+
+.barra{
+    display: flex;
+    width: 35px;
+    color: var(--cor-primaria);
+    justify-content: center;
+}
+
+.legenda{
+    color: var(--cor-primaria);
+}

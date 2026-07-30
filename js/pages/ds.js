@@ -38,7 +38,7 @@ function filtrarAlunos(status, container){
 
 export async function criarAlunosDS(){
     const secao = document.createElement('section')
-    secao.id = 'secaoDS'
+    secao.className = 'secao'
 
     // seção de escolha
     const statusSecao = document.createElement('select')
@@ -121,6 +121,11 @@ export async function criarAlunosDS(){
         alunos.dataset.status = aluno.status // guarda o status do aluno como uma etiqueta no card (data-status)
 
         const statusAluno = await formadoNaoFormado(aluno.status, alunos)
+
+        // carrega a pagina do aluno com base no seun id
+        alunos.addEventListener('click', () => {
+            renderizarPagina('aluno', aluno.id)
+        })
 
         const fotoAluno = document.createElement('img')
         fotoAluno.src = aluno.foto
