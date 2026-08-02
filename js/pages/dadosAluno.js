@@ -1,5 +1,7 @@
 'use strict'
 
+import { renderizarPagina } from '../main.js'
+
 async function getInformacoesAluno(id){
     const url = `https://lion-school-phbo.onrender.com/alunos/${id}`
     const response = await fetch(url)
@@ -52,10 +54,10 @@ export async function criarDadosAluno(id){
             if(desempenho.valor >= 70){
                 barra.style.backgroundColor = '#3347B0'
                 numero.style.color = '#3347B0'
-            } else if(desempenho.valor < 70){
+            } else if(desempenho.valor >= 50){
                 barra.style.backgroundColor = '#E5B657'
                 numero.style.color = '#E5B657'
-            } else if(desempenho.valor < 50){
+            } else{
                 barra.style.backgroundColor = '#C11010'
                 numero.style.color = '#C11010'
             }

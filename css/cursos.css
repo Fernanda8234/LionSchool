@@ -5,9 +5,19 @@
     height: 40px;
 }
 
+.legendaSection{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 70px;
+}
+
+.legendaSection p{
+    color: var(--cor-primaria);
+}
+
 .caixaLegenda{
     flex-direction: row;
-    margin-right: 70px;
     gap: 24px;
 }
 
@@ -19,18 +29,10 @@
     gap: 10px;
 }
 
-.corAzul, .corAmarela{
+.cor{
     width: 20px;
     height: 20px;
     box-shadow: 0px 3px 5px #00000030;
-}
-
-.corAzul{
-    background-color: var(--cor-primaria);
-}
-
-.corAmarela{
-    background-color: var(--cor-terciaria);
 }
 
 select{
@@ -91,11 +93,11 @@ select{
     margin-bottom: 40px;
 }
 
-.alunos.formado{
+.formado{
     background-color: var(--cor-terciaria);
 }
 
-.alunos.nao-formado{
+.nao-formado{
     background-color: var(--cor-primaria);
 }
 
@@ -112,4 +114,11 @@ select, .caixaLegenda p, .titulo{
 
 .alunos.formado, .alunos.nao-formado{
     box-shadow: 10px 10px 8px #00000030;
+}
+
+@media(width: 480px){
+    .titulo{
+        font-size: 40px;
+        text-align: center;
+    }
 }

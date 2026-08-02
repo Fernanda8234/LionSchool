@@ -1,8 +1,7 @@
 'use strict'
 
 import { criarInicio } from './pages/inicio.js'
-import { criarAlunosDS } from './pages/ds.js'
-import { criarAlunosRedes } from './pages/redes.js'
+import { criarAlunosCurso } from './pages/cursos.js'
 import { criarDadosAluno } from './pages/dadosAluno.js'
 
 const paginas = {
@@ -12,11 +11,11 @@ const paginas = {
     },
     ds: {
         titulo: 'ds',
-        renderizar: criarAlunosDS
+        renderizar: () => criarAlunosCurso(1, 'Desenvolvimento de Sistemas')
     },
     redes: {
         titulo: 'redes',
-        renderizar: criarAlunosRedes
+        renderizar: () => criarAlunosCurso(2, 'Redes')
     },
     aluno: {
         titulo: 'aluno',
@@ -25,9 +24,9 @@ const paginas = {
 }
 
 // o id é caso uma página precise de um id para renderizar, como a página do aluno
-export async function renderizarPagina(nomePagina, id = null){
+export async function renderizarPagina(nomePagina, id = null, origem = null){
     const main = document.getElementById('main-content')
-    const pagina = await paginas[nomePagina].renderizar(id)
+    const pagina = await paginas[nomePagina].renderizar(id, origem)
     main.replaceChildren(pagina)
 }
 

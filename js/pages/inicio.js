@@ -53,9 +53,11 @@ export async function criarInicio(){
     const botoes = document.createElement('div')
     botoes.className = 'caixaBotaoInicio'
     
-    // if (window.innerWidth <= 480){
-        
-    // }
+    if(window.innerWidth <= 480){
+        ds.style.fontSize = '64px'
+        redes.textContent = 'RDS'
+        redes.style.fontSize = '40px'
+    }
 
     apresentacao.append(texto, dispositivos)
 
