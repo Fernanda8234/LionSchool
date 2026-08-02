@@ -98,6 +98,10 @@ export async function criarAlunosRedes(){
 
         const statusAluno = await formadoNaoFormado(aluno.status, alunos)
 
+        alunos.addEventListener('click', () => {
+            renderizarPagina('aluno', aluno.id)
+        })
+
         const fotoAluno = document.createElement('img')
         fotoAluno.src = aluno.foto
 

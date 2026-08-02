@@ -81,12 +81,12 @@ select{
     text-align: center;
     padding: 0 10px;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 2px 4.5px 2px #0000003e;
+    text-shadow: 2px 3px 2px #0000003e;
 }
 
 .alunos img{
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     border-radius:50%;
     margin-bottom: 40px;
 }

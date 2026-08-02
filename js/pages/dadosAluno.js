@@ -34,9 +34,16 @@ export async function criarDadosAluno(id){
         aluno.desempenho.forEach(function(desempenho){
             const itensCaixa = document.createElement('div')
             itensCaixa.className = 'itensCaixa'
+            
+            const numero = document.createElement('p')
+            numero.textContent = desempenho.valor
+            numero.className = 'numero'
 
             const barra = document.createElement('div')
             barra.className = 'barra'
+
+            const barraCaixa = document.createElement('div')
+            barraCaixa.className = 'barraCaixa'
 
             barra.textContent = desempenho.valor
             barra.style.height = desempenho.valor + '%'
@@ -44,17 +51,22 @@ export async function criarDadosAluno(id){
 
             if(desempenho.valor >= 70){
                 barra.style.backgroundColor = '#3347B0'
+                numero.style.color = '#3347B0'
             } else if(desempenho.valor < 70){
                 barra.style.backgroundColor = '#E5B657'
+                numero.style.color = '#E5B657'
             } else if(desempenho.valor < 50){
                 barra.style.backgroundColor = '#C11010'
+                numero.style.color = '#C11010'
             }
 
             const legenda = document.createElement('p')
             legenda.textContent = desempenho.categoria
             legenda.className = 'legenda'
 
-            itensCaixa.append(barra, legenda)
+            barraCaixa.append(barra)
+
+            itensCaixa.append(numero, barraCaixa, legenda)
 
             grafico.append(itensCaixa)
         })

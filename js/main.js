@@ -3,7 +3,7 @@
 import { criarInicio } from './pages/inicio.js'
 import { criarAlunosDS } from './pages/ds.js'
 import { criarAlunosRedes } from './pages/redes.js'
-import { criarDadosAluno } from './pages/aluno.js'
+import { criarDadosAluno } from './pages/dadosAluno.js'
 
 const paginas = {
     inicio: {

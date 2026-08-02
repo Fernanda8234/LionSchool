@@ -122,7 +122,7 @@ export async function criarAlunosDS(){
 
         const statusAluno = await formadoNaoFormado(aluno.status, alunos)
 
-        // carrega a pagina do aluno com base no seun id
+        // carrega a pagina do aluno com base no seu id
         alunos.addEventListener('click', () => {
             renderizarPagina('aluno', aluno.id)
         })
